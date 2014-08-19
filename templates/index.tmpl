@@ -3,9 +3,8 @@
   {% for post in posts %}
     <section>
       <div class="page-header">
-        <h1><a href="{{ post.permalink() }}">{{ post.title() }}</a>
-        <small><time datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time></small>
-        </h1>
+        <h1><a href="{{ post.permalink() }}">{{ post.title() }}</a></h1>
+        <span class="fa fa-calendar-o fa-lg"> <time datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time></span>
       </div>
       {% if index_teasers %}
       <div class="p-summary">
