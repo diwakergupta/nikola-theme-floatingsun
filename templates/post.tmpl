@@ -1,0 +1,15 @@
+{% extends 'base.tmpl' %}
+{% block content %}
+    <article>
+      <div class="page-header">
+        <h1>{{ post.title() }}</h1>
+        </h1>
+      </div>
+    {{ post.text() }}
+    </article>
+<div class="g-comments"
+    data-href="{{ post.permalink(absolute=True) }}"
+    data-first_party_property="BLOGGER"
+    data-view_type="FILTERED_POSTMOD">
+</div>
+{% endblock %}
