@@ -7,9 +7,27 @@
       </div>
     {{ post.text() }}
     </article>
-<div class="g-comments"
-    data-href="{{ post.permalink(absolute=True) }}"
-    data-first_party_property="BLOGGER"
-    data-view_type="FILTERED_POSTMOD">
-</div>
+    <div class="panel panel-info share-icons">
+    <div class="panel-heading">
+    <h3 class="panel-title">Share This</h3>
+    </div>
+    <div class="panel-body">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-size="large" data-via="diwakergupta" data-text="{{ post.title() }}">Tweet</a>
+    <div class="g-plusone"></div>
+    <div class="g-plus" data-action="share" data-annotation="bubble" data-height="24"></div>
+    </div>
+    </div>
+
+    <div class="panel panel-default comments">
+        <div class="panel-heading">
+            <h3 class="panel-title">Comments</h3>
+        </div>
+        <div class="panel-body">
+            <div class="g-comments"
+                data-href="{{ post.permalink(absolute=True) }}"
+                data-first_party_property="BLOGGER"
+                data-view_type="FILTERED_POSTMOD">
+            </div>
+        </div>
+    </div>
 {% endblock %}
