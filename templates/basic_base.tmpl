@@ -4,10 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title|e }} | {{ blog_title|e }}</title>
     {% if description %}
     <meta name="description" content="{{ description }}">
     {% endif %}
     <meta name="author" content="{{ blog_author }}">
+
+    {% if permalink %}
+      <link rel="canonical" href="{{ abs_link(permalink) }}">
+    {% endif %}
 
     {% block bootstrap %}
     <!-- themes can/should override this -->
